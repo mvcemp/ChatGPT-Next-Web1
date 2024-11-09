@@ -4,7 +4,6 @@ import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import DeleteIcon from "../icons/delete.svg";
@@ -137,7 +136,7 @@ export function SideBarContainer(props: {
   const isMobileScreen = useMobileScreen();
   const isIOSMobile = useMemo(
     () => isIOS() && isMobileScreen,
-    [isMobileScreen],
+    [isMobileScreen]
   );
   const { children, className, onDragStart, shouldNarrow } = props;
   return (
@@ -232,7 +231,7 @@ export function SideBar(props: { className?: string }) {
     >
       <SideBarHeader
         title="NextChat"
-        subTitle="Build your own AI assistant."
+        subTitle="ChatGPT"
         logo={<ChatGptIcon />}
         shouldNarrow={shouldNarrow}
       >
@@ -305,15 +304,6 @@ export function SideBar(props: { className?: string }) {
                   shadow
                 />
               </Link>
-            </div>
-            <div className={styles["sidebar-action"]}>
-              <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-                <IconButton
-                  aria={Locale.Export.MessageFromChatGPT}
-                  icon={<GithubIcon />}
-                  shadow
-                />
-              </a>
             </div>
           </>
         }
