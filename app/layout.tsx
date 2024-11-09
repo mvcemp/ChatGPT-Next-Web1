@@ -11,7 +11,7 @@ const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
   title: "NextChat",
-  description: "Your personal ChatGPT Chat Bot.",
+  description: "Chat Bot.",
   appleWebApp: {
     title: "NextChat",
     statusBarStyle: "default",
